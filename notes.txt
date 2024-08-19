@@ -1,0 +1,4 @@
+to read: 
+https://react.dev/blog/2023/03/16/introducing-react-dev
+https://blog.logrocket.com/build-react-typescript-app-vite/
+https://vitejs.dev/guide/
