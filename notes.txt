@@ -2,3 +2,4 @@ to read:
 https://react.dev/blog/2023/03/16/introducing-react-dev
 https://blog.logrocket.com/build-react-typescript-app-vite/
 https://vitejs.dev/guide/
+https://survey.stackoverflow.co/2023/#section-most-popular-technologies-web-frameworks-and-technologies
