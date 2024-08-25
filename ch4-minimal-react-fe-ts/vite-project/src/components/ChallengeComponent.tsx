@@ -1,7 +1,7 @@
 import * as React from "react";
 import ApiClient from "../services/ApiClient.tsx";
-class ChallengeComponent extends React.Component {
-    constructor(props) {
+class Challenge extends React.Component <{}, { a: string, b: string, user: string, message : string, guess: number}> {
+    constructor(props : any) {
         super(props);
         this.state = {
             a: '', b: '',
@@ -34,10 +34,10 @@ class ChallengeComponent extends React.Component {
             [name]: event.target.value
         });
     }
-    handleSubmitResult(event) {
+    handleSubmitResult(event : any) {
         event.preventDefault();
         ApiClient.sendGuess(this.state.user,
-            this.state.a, this.state.b,
+            +this.state.a, +this.state.b,
             this.state.guess)
             .then(res => {
                 if (res.ok) {
@@ -71,7 +71,8 @@ class ChallengeComponent extends React.Component {
                 <form onSubmit={this.handleSubmitResult}>
                     <label>
                         Your alias:
-                        <input type="text" maxLength="12"
+                        <input type="text" 
+                               maxLength=12
                                name="user"
                                value={this.state.user}
                                onChange={this.handleChange}/>
@@ -92,4 +93,4 @@ class ChallengeComponent extends React.Component {
         );
     }
 }
-export default ChallengeComponent;
+export default Challenge;
